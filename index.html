@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Project 2027: The Deal</title>
+<meta name="description" content="Project 2027: a legislative agenda for the 120th Congress. Internal strategy memo, working draft.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0A3161">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#B31942; --red-ink:#8F1233; --blue:#0A3161; --blue-2:#1B4F9C;
+  --paper:#F3F6FB; --card:#FFFFFF; --ink:#0B1B33; --soft:#40506A; --h:#0A3161;
+  --t1:#E6EDF8; --t2:#CCDAF0; --line:#C9D5E8; --link:#1B4F9C; --focus:#B31942;
+  --todo-bg:#FBE6EB; --todo-ink:#8F1233;
+  --head:"Libre Baskerville", Baskerville, "Baskerville Old Face", "Hoefler Text", Georgia, serif;
+  --text:"Source Sans 3", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --red:#FF7893; --red-ink:#FFA3B5; --paper:#08142A; --card:#0F2244; --ink:#EDF2FB;
+    --soft:#B4C2DA; --h:#FFFFFF; --t1:#12294F; --t2:#1A3768; --line:#27416F;
+    --link:#9CC0FF; --focus:#FFB3C2; --todo-bg:#40162A; --todo-ink:#FFB3C2;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--text);font-size:1.125rem;line-height:1.65;padding-bottom:env(safe-area-inset-bottom)}
+a{color:var(--link)}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:0;background:#fff;color:#0A3161;padding:.75rem 1rem;z-index:50;font-weight:700}
+.skip:focus{left:.5rem;top:.5rem}
+
+/* ---------- Hero ---------- */
+.hero{max-width:64rem;margin:0 auto}
+.flag{display:block;line-height:0;overflow:hidden}
+.flag svg{display:block;width:100%;height:clamp(15rem,42vw,26rem)}
+.titlecard{position:relative;margin:-2.5rem 1rem 0;padding:2rem 1.4rem 1.5rem;background:var(--card);border:1px solid var(--line);border-top:0}
+.titlecard::before,.rule{content:"";display:block;height:9px;background:linear-gradient(var(--red) 0 3px,transparent 3px 6px,var(--blue-2) 6px 9px)}
+.titlecard::before{position:absolute;top:0;left:0;right:0}
+h1{font-family:var(--head);font-weight:700;font-size:clamp(2.6rem,13vw,4.4rem);line-height:1.04;letter-spacing:-.01em;margin:0;color:var(--h)}
+.sub{font-family:var(--head);font-size:1.2rem;line-height:1.4;color:var(--soft);margin:.7rem 0 1.1rem}
+.status{font-size:.98rem;line-height:1.5;margin:0;padding:.15rem 0 .15rem .8rem;border-left:4px solid var(--red);color:var(--soft)}
+
+/* ---------- Jump nav ---------- */
+.jump{position:sticky;top:0;z-index:20;margin-top:1.4rem;background:var(--blue);box-shadow:0 3px 0 var(--red);padding:calc(env(safe-area-inset-top) + .5rem) 0 .5rem}
+.jump ul{display:flex;gap:.5rem;margin:0;padding:0 1rem;list-style:none;overflow-x:auto;scrollbar-width:none}
+.jump ul::-webkit-scrollbar{display:none}
+.jump a{display:flex;align-items:center;min-height:44px;padding:0 1rem;border:1px solid rgba(255,255,255,.45);border-radius:999px;color:#fff;text-decoration:none;font-weight:600;font-size:.97rem;white-space:nowrap}
+.jump a[aria-current="true"]{background:#fff;color:var(--blue);border-color:#fff}
+
+/* ---------- Content ---------- */
+.wrap{max-width:40rem;margin:0 auto;padding:0 1.25rem}
+section{padding:2.25rem 0 .75rem;scroll-margin-top:4.75rem}
+section.priority{border-top:1px solid var(--line);margin-top:1rem}
+h2{font-family:var(--head);font-size:1.6rem;line-height:1.25;margin:0 0 1rem;color:var(--h)}
+h3{font-family:var(--head);font-size:1.12rem;line-height:1.35;margin:0 0 .5rem;color:inherit}
+p{margin:0 0 1.05rem}
+.lead{font-size:1.27rem;line-height:1.55}
+.ph{display:flex;align-items:flex-start;gap:.8rem}
+.badge{flex:none;display:grid;place-items:center;width:2.3rem;height:2.3rem;margin-top:.1rem;border-radius:50%;background:var(--red);color:#fff;font-family:var(--text);font-weight:700;font-size:1.1rem;line-height:1}
+@media (prefers-color-scheme: dark){.badge{color:#2A0612}}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.callout{margin:1.4rem 0;padding:1rem 1.1rem 0;background:var(--t1);border-left:6px solid var(--blue-2)}
+
+.overview{list-style:none;margin:0;padding:0;counter-reset:p}
+.overview li{counter-increment:p;border-bottom:1px solid var(--line)}
+.overview a{display:flex;align-items:center;gap:.9rem;min-height:58px;padding:.6rem .15rem;color:var(--ink);text-decoration:none;font-weight:600}
+.overview a::before{content:counter(p);flex:none;display:grid;place-items:center;width:2.2rem;height:2.2rem;border-radius:50%;background:var(--blue);color:#fff;font-weight:700}
+.overview li:nth-child(odd) a::before{background:var(--red)}
+@media (prefers-color-scheme: dark){.overview li:nth-child(odd) a::before{color:#2A0612}.overview li:nth-child(even) a::before{background:var(--blue-2)}}
+
+.tier{margin:1.15rem 0;padding:1.15rem 1.15rem .2rem;border:1px solid var(--line);border-left-width:6px}
+.tier p:last-child{margin-bottom:1.05rem}
+.t1{background:var(--t1);border-left-color:var(--blue-2)}
+.t2{background:var(--t2);border-left-color:var(--blue)}
+.t3{background:var(--blue);color:#fff;border-color:var(--blue);border-left-color:var(--red);border-top:6px solid var(--red)}
+.t3 h3{color:#fff}
+.t3 a{color:#fff}
+.pairs{list-style:none;margin:.4rem 0 0;padding:0}
+.pairs li{position:relative;padding:.85rem 0 .85rem 1.7rem;border-top:1px solid rgba(255,255,255,.28)}
+.pairs li::before{content:"\2605";position:absolute;left:0;top:.8rem;color:#FF9DB1}
+.pairs li:last-child{padding-bottom:1.1rem}
+
+.todo{font-style:italic;background:var(--todo-bg);color:var(--todo-ink);padding:.05em .4em;border-radius:4px;white-space:normal}
+.act{font-weight:700}
+sup a{display:inline-block;padding:0 .25em;font-weight:700;text-decoration:none}
+
+.rule{margin:2.5rem 0 0}
+.rules{list-style:none;margin:0 0 1rem;padding:0}
+.rules li{position:relative;padding:.7rem 0 .7rem 2rem;border-bottom:1px solid var(--line)}
+.rules li::before{content:"\2605";position:absolute;left:.1rem;top:.62rem;color:var(--red);font-size:1.15rem}
+.checks{list-style:none;margin:0 0 1rem;padding:0}
+.checks li{display:flex;gap:.85rem;padding:.6rem 0;border-bottom:1px solid var(--line)}
+.checks li::before{content:"";flex:none;width:1.2rem;height:1.2rem;margin-top:.32rem;border:2px solid var(--blue-2);border-radius:3px}
+.notes{padding-left:1.3rem;font-size:.98rem;line-height:1.55;color:var(--soft)}
+.notes li{margin-bottom:.6rem;overflow-wrap:anywhere}
+
+footer{margin-top:3rem;text-align:center;font-size:.95rem;color:var(--soft)}
+footer p{padding:1.1rem 1.25rem 2.25rem;margin:0}
+
+/* ---------- Motion: one moment, the flag unfurling ---------- */
+@media (prefers-reduced-motion: no-preference){
+  .s{transform-box:fill-box;transform-origin:0 50%;animation:unfurl .9s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--i) * 80ms)}
+  .canton,.stars{animation:fadein .7s ease both;animation-delay:.55s}
+}
+@keyframes unfurl{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes fadein{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+
+@media (min-width:48rem){
+  body{font-size:1.1875rem}
+  .titlecard{margin:-3.5rem auto 0;max-width:44rem;padding:2.4rem 2.2rem 1.9rem}
+}
+@media print{
+  .jump,.skip{display:none}
+  body{background:#fff;color:#000;font-size:11pt}
+  .flag svg{max-height:9rem}
+  .titlecard{margin-top:-1rem}
+  section{break-inside:avoid-page}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#offer">Skip to the memo</a>
+
+<header class="hero">
+  <div class="flag" role="img" aria-label="The American flag"><svg viewBox="0 0 760 400" preserveAspectRatio="xMinYMin slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><defs><polygon id="st" points="0.00,-12.32 2.77,-3.81 11.72,-3.81 4.48,1.45 7.24,9.97 0.00,4.71 -7.24,9.97 -4.48,1.45 -11.72,-3.81 -2.77,-3.81"/></defs><rect width="760" height="400" fill="#FFFFFF"/><rect class="s" style="--i:0" x="0" y="0.000" width="760" height="31.069" fill="#B31942"/><rect class="s" style="--i:1" x="0" y="61.538" width="760" height="31.069" fill="#B31942"/><rect class="s" style="--i:2" x="0" y="123.077" width="760" height="31.069" fill="#B31942"/><rect class="s" style="--i:3" x="0" y="184.615" width="760" height="31.069" fill="#B31942"/><rect class="s" style="--i:4" x="0" y="246.154" width="760" height="31.069" fill="#B31942"/><rect class="s" style="--i:5" x="0" y="307.692" width="760" height="31.069" fill="#B31942"/><rect class="s" style="--i:6" x="0" y="369.231" width="760" height="31.069" fill="#B31942"/><rect class="canton" width="304.00" height="215.38" fill="#0A3161"/><g class="stars" fill="#FFFFFF"><use href="#st" transform="translate(25.33 21.54)"/><use href="#st" transform="translate(76.00 21.54)"/><use href="#st" transform="translate(126.67 21.54)"/><use href="#st" transform="translate(177.33 21.54)"/><use href="#st" transform="translate(228.00 21.54)"/><use href="#st" transform="translate(278.67 21.54)"/><use href="#st" transform="translate(50.67 43.08)"/><use href="#st" transform="translate(101.33 43.08)"/><use href="#st" transform="translate(152.00 43.08)"/><use href="#st" transform="translate(202.67 43.08)"/><use href="#st" transform="translate(253.33 43.08)"/><use href="#st" transform="translate(25.33 64.62)"/><use href="#st" transform="translate(76.00 64.62)"/><use href="#st" transform="translate(126.67 64.62)"/><use href="#st" transform="translate(177.33 64.62)"/><use href="#st" transform="translate(228.00 64.62)"/><use href="#st" transform="translate(278.67 64.62)"/><use href="#st" transform="translate(50.67 86.15)"/><use href="#st" transform="translate(101.33 86.15)"/><use href="#st" transform="translate(152.00 86.15)"/><use href="#st" transform="translate(202.67 86.15)"/><use href="#st" transform="translate(253.33 86.15)"/><use href="#st" transform="translate(25.33 107.69)"/><use href="#st" transform="translate(76.00 107.69)"/><use href="#st" transform="translate(126.67 107.69)"/><use href="#st" transform="translate(177.33 107.69)"/><use href="#st" transform="translate(228.00 107.69)"/><use href="#st" transform="translate(278.67 107.69)"/><use href="#st" transform="translate(50.67 129.23)"/><use href="#st" transform="translate(101.33 129.23)"/><use href="#st" transform="translate(152.00 129.23)"/><use href="#st" transform="translate(202.67 129.23)"/><use href="#st" transform="translate(253.33 129.23)"/><use href="#st" transform="translate(25.33 150.77)"/><use href="#st" transform="translate(76.00 150.77)"/><use href="#st" transform="translate(126.67 150.77)"/><use href="#st" transform="translate(177.33 150.77)"/><use href="#st" transform="translate(228.00 150.77)"/><use href="#st" transform="translate(278.67 150.77)"/><use href="#st" transform="translate(50.67 172.31)"/><use href="#st" transform="translate(101.33 172.31)"/><use href="#st" transform="translate(152.00 172.31)"/><use href="#st" transform="translate(202.67 172.31)"/><use href="#st" transform="translate(253.33 172.31)"/><use href="#st" transform="translate(25.33 193.85)"/><use href="#st" transform="translate(76.00 193.85)"/><use href="#st" transform="translate(126.67 193.85)"/><use href="#st" transform="translate(177.33 193.85)"/><use href="#st" transform="translate(228.00 193.85)"/><use href="#st" transform="translate(278.67 193.85)"/></g></svg></div>
+  <div class="titlecard">
+    <h1>Project 2027</h1>
+    <p class="sub">The Deal: A Legislative Agenda for the 120th Congress</p>
+    <p class="status">Internal strategy memo prepared for the Democratic leadership. Not for distribution to the White House. Draft.</p>
+  </div>
+</header>
+
+<nav class="jump" aria-label="Jump to a section">
+  <ul>
+    <li><a href="#offer">Offer</a></li>
+    <li><a href="#p1">Honor</a></li>
+    <li><a href="#p2">Costs</a></li>
+    <li><a href="#p3">Health</a></li>
+    <li><a href="#p4">Housing</a></li>
+    <li><a href="#p5">Clean gov</a></li>
+    <li><a href="#p6">Limits</a></li>
+    <li><a href="#p7">Energy</a></li>
+    <li><a href="#rules">Rules</a></li>
+    <li><a href="#first100">100 days</a></li>
+    <li><a href="#open">Open items</a></li>
+    <li><a href="#sources">Sources</a></li>
+  </ul>
+</nav>
+
+<main>
+
+<section id="offer"><div class="wrap">
+  <h2>The Offer</h2>
+  <p class="lead">Voters have given Democrats both chambers of Congress, and the President holds the veto. Democrats want lower costs and a stronger, more secure country for American families, and President Trump wants his place in history.</p>
+  <p>Project 2027 puts both on the table. Each prize is paired with a specific bill, each pairing is negotiated separately, and everything happens in public. Nothing is delivered until the legislation is signed.</p>
+  <div class="callout">
+    <p><strong>Negotiating posture.</strong> Democrats open with the Tier 1 honors and the naming credit only, using the companion offer sheet prepared for the White House. Everything else in this memo is held in reserve and released one item at a time, as each bill advances.</p>
+  </div>
+</div></section>
+
+<section id="priorities"><div class="wrap">
+  <h2>The Seven Priorities</h2>
+  <ol class="overview">
+    <li><a href="#p1">Honor the Trump Presidency</a></li>
+    <li><a href="#p2">Lower the cost of groceries and gas</a></li>
+    <li><a href="#p3">Make healthcare affordable</a></li>
+    <li><a href="#p4">Open the door to housing for young people</a></li>
+    <li><a href="#p5">Clean up money and corruption in politics</a></li>
+    <li><a href="#p6">Rebalance the powers of the presidency</a></li>
+    <li><a href="#p7">Reduce dependency on the Strait of Hormuz</a></li>
+  </ol>
+</div></section>
+
+<section class="priority" id="p1"><div class="wrap"><h2 class="ph"><span class="badge" aria-hidden="true">1</span><span><span class="vh">Priority 1: </span>Honor the Trump Presidency</span></h2>
+  <p>Democrats offer President Trump recognition that only Congress can give, in exchange for his signature on the legislative priorities outlined below. Every honor is tied to the passage of a legislative act intended to improve the lives of all Americans. The honors come in three tiers, from small gestures to the largest prizes.</p>
+
+  <div class="tier t1">
+    <h3>Tier 1 is offered up front</h3>
+    <p>Congress creates the United States Presidential Peace Prize, and President Trump receives the first one. Congress also passes formal commendations for specific, documented accomplishments.</p>
+  </div>
+
+  <div class="tier t2">
+    <h3>Tier 2 is negotiable</h3>
+    <p>Congress authorizes the White House ballroom and underground security complex, with disclosed funding and a cost cap. It authorizes the triumphal Arch, with a fixed site, budget and design review. It also protects the redesigned Oval Office from alteration by later administrations.</p>
+  </div>
+
+  <div class="tier t3">
+    <h3>Tier 3 is reserved for the biggest deals</h3>
+    <p>Congress adds his name to the Kennedy Center, which a federal judge has ruled only Congress can do.<sup><a id="r1" href="#n1" aria-label="Note 1">1</a></sup> Congress also considers his portrait on American money, which requires changing an 1866 law allowing only portraits of deceased people on U.S. currency.<sup><a id="r2" href="#n2" aria-label="Note 2">2</a></sup> Each currency option is negotiated on its own, and each is paired with a specific bill:</p>
+    <ul class="pairs">
+      <li><strong>The gold coin.</strong> Congress settles the coin&rsquo;s legal status, in exchange for the grocery and gas relief package.</li>
+      <li><strong>The $1 bill.</strong> Congress lifts the ban for this note, in exchange for the first-time and young homebuyer package.</li>
+      <li><strong>The $250 commemorative note.</strong> Congress authorizes a new denomination bearing his portrait, in exchange for a cap on prescription drug prices and out-of-pocket costs.</li>
+      <li><strong>The $100 bill.</strong> Congress lifts the ban for the nation&rsquo;s top working bill, in exchange for a landmark healthcare affordability law. This is the biggest prize, and it is priced accordingly.</li>
+    </ul>
+  </div>
+</div></section>
+<section class="priority" id="p2"><div class="wrap"><h2 class="ph"><span class="badge" aria-hidden="true">2</span><span><span class="vh">Priority 2: </span>Lower the Cost of Groceries and Gas</span></h2>
+  <p>Families feel the price of food and fuel every week. Democrats pass a relief package aimed at both, <span class="todo">[specific mechanisms to be added]</span>. It is the first and smallest deal, and it opens negotiations by showing that the process works.</p>
+</div></section>
+<section class="priority" id="p3"><div class="wrap"><h2 class="ph"><span class="badge" aria-hidden="true">3</span><span><span class="vh">Priority 3: </span>Make Healthcare Affordable</span></h2>
+  <p>Healthcare is the largest bill on the table. Democrats cap prescription drug prices and out-of-pocket costs, then follow with a comprehensive affordability law. These bills carry the $250 note and the $100 bill, because the biggest benefit to families earns the biggest honor.</p>
+</div></section>
+<section class="priority" id="p4"><div class="wrap"><h2 class="ph"><span class="badge" aria-hidden="true">4</span><span><span class="vh">Priority 4: </span>Open the Door to Housing for Young People</span></h2>
+  <p>Buying a first home has become out of reach for a generation. Democrats pass a first-time and young homebuyer package, <span class="todo">[specific mechanisms to be added]</span>. It is paired with the $1 bill.</p>
+</div></section>
+<section class="priority" id="p5"><div class="wrap"><h2 class="ph"><span class="badge" aria-hidden="true">5</span><span><span class="vh">Priority 5: </span>Clean Up Money and Corruption in Politics</span></h2>
+  <p>Democrats strengthen the rules on money in politics and protect the independence of the Department of Justice. These reforms are not traded for any prize, and neither is oversight. Investigations proceed on their own track, separate from the deal.</p>
+</div></section>
+<section class="priority" id="p6"><div class="wrap"><h2 class="ph"><span class="badge" aria-hidden="true">6</span><span><span class="vh">Priority 6: </span>Rebalance the Powers of the Presidency</span></h2>
+  <p>Democrats pass clear limits on executive power that take effect at the start of the next term, so the rules apply to every future president equally. Democrats consider this the most valuable item in the plan. <span class="todo">[Decision: what, if anything, is offered in exchange.]</span></p>
+</div></section>
+<section class="priority" id="p7"><div class="wrap"><h2 class="ph"><span class="badge" aria-hidden="true">7</span><span><span class="vh">Priority 7: </span>Reduce Dependency on the Strait of Hormuz</span></h2>
+  <p>Any legislation that revises a provision of the One Big Beautiful Bill is passed as the <span class="act">Donald J. Trump Recognition and Betterizing America Act</span>. The energy section of that act is the <span class="act">Reduce Dependency on Strait of Hormuz Act</span>. It restores tax credits for solar panels and home batteries, restores tax credits for electric vehicles, and funds upgrades to the resilience of the power grid.</p>
+  <p>Its purpose is to protect American families and the American economy from price shocks caused by conflict overseas. Every barrel of oil the country does not need is a barrel that no foreign navy can block. The naming credit is the only recognition offered for this priority.</p>
+</div></section>
+
+<section id="rules"><div class="wrap">
+  <div class="rule" aria-hidden="true"></div>
+  <h2 style="margin-top:2rem">How the Deal Works</h2>
+  <p>Five rules govern every item.</p>
+  <ul class="rules">
+    <li>Nothing takes effect until the law it was traded for takes effect.</li>
+    <li>The biggest prizes are tied to the biggest bills.</li>
+    <li>Every concession is written into a bill, passed by Congress and placed on the public record.</li>
+    <li>There are no private gifts and no side deals.</li>
+    <li>Every bill in the plan carries the name Donald J. Trump, so the credit for each accomplishment is unmistakable.</li>
+  </ul>
+</div></section>
+
+<section id="first100"><div class="wrap">
+  <h2>The First 100 Days</h2>
+  <p>Congress convenes on January 3 and introduces all seven priorities together. Democrats open talks with the White House on a first package and publish a public scorecard so voters can follow the progress.</p>
+</div></section>
+
+<section id="open"><div class="wrap">
+  <h2>Open Items</h2>
+  <ul class="checks">
+    <li>Specific mechanisms for Priority 2 (groceries and gas).</li>
+    <li>Specific mechanisms for Priority 4 (housing for young people).</li>
+    <li>What, if anything, is offered in exchange for Priority 6 (limits on the presidency).</li>
+  </ul>
+</div></section>
+
+<section id="sources"><div class="wrap">
+  <h2>Notes and Sources</h2>
+  <ol class="notes">
+    <li id="n1">U.S. District Judge Christopher Cooper ruled on May 29, 2026 that the Kennedy Center cannot be renamed without an act of Congress. Source: <a href="https://www.spokesman.com/stories/2026/may/29/us-judge-orders-removal-of-trumps-name-from-kenned/">Spokesman-Review</a>. <a href="#r1" aria-label="Back to the text">Back to text</a></li>
+    <li id="n2">The 1866 law provides that only the portrait of a deceased individual may appear on U.S. currency and securities. Legislation to create an exception has been introduced but has not advanced. Source: <a href="https://tucson.com/news/nation-world/government-politics/article_69d05a2f-1654-5851-a01b-6a261e4e4f9b.html">tucson.com</a>. <a href="#r2" aria-label="Back to the text">Back to text</a></li>
+  </ol>
+</div></section>
+
+</main>
+
+<footer>
+  <div class="rule" aria-hidden="true"></div>
+  <p>Project 2027 working draft, prepared for the Democratic leadership.</p>
+</footer>
+
+<script>
+(function(){
+  var links=[].slice.call(document.querySelectorAll('.jump a'));
+  if(!links.length||!('IntersectionObserver' in window)) return;
+  var map={};
+  links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(!e.isIntersecting) return;
+      var a=map[e.target.id]; if(!a) return;
+      links.forEach(function(x){x.removeAttribute('aria-current');});
+      a.setAttribute('aria-current','true');
+      var ul=a.parentElement.parentElement;
+      ul.scrollTo({left:a.offsetLeft-(ul.clientWidth-a.offsetWidth)/2,behavior:'smooth'});
+    });
+  },{rootMargin:'-18% 0px -72% 0px'});
+  Object.keys(map).forEach(function(id){var s=document.getElementById(id); if(s) io.observe(s);});
+})();
+</script>
+</body>
+</html>
