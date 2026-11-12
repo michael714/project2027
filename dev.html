@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Project 2027: The Art of the Deal</title>
+<meta name="description" content="A legislative agenda for the 120th Congress: lower costs, affordable healthcare, housing for young people, and cleaner government.">
+<meta name="robots" content="noindex, nofollow">
+<!-- Link preview tags (Facebook, X, iMessage, Slack). logo.png must sit in the same folder as this page. -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Project 2027">
+<meta property="og:title" content="Project 2027: The Art of the Deal">
+<meta property="og:description" content="A legislative agenda for the 120th Congress: lower costs, affordable healthcare, housing for young people, and cleaner government.">
+<meta property="og:url" content="https://michael714.github.io/project2027/">
+<meta property="og:image" content="https://michael714.github.io/project2027/logo.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A cartoon blue donkey and red elephant giving thumbs up at a town hall event">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Project 2027: The Art of the Deal">
+<meta name="twitter:description" content="A legislative agenda for the 120th Congress: lower costs, affordable healthcare, housing for young people, and cleaner government.">
+<meta name="twitter:image" content="https://michael714.github.io/project2027/logo.png">
+<meta name="theme-color" content="#0A3161">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#B31942; --red-ink:#8F1233; --blue:#0A3161; --blue-2:#1B4F9C;
+  --paper:#F3F6FB; --card:#FFFFFF; --ink:#0B1B33; --soft:#40506A; --h:#0A3161;
+  --t1:#E6EDF8; --t2:#CCDAF0; --line:#C9D5E8; --link:#1B4F9C; --focus:#B31942;
+  --hot:#FFD3DC; --hot-ink:#0B1B33;
+  --head:"Libre Baskerville", Baskerville, "Baskerville Old Face", "Hoefler Text", Georgia, serif;
+  --text:"Source Sans 3", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --red:#FF7893; --red-ink:#FFA3B5; --paper:#08142A; --card:#0F2244; --ink:#EDF2FB;
+    --soft:#B4C2DA; --h:#FFFFFF; --t1:#12294F; --t2:#1A3768; --line:#27416F;
+    --link:#9CC0FF; --focus:#FFB3C2; --hot:#7A2740; --hot-ink:#FFFFFF;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--text);font-size:1.125rem;line-height:1.65;padding-bottom:env(safe-area-inset-bottom)}
+a{color:var(--link)}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:0;background:#fff;color:#0A3161;padding:.75rem 1rem;z-index:50;font-weight:700}
+.skip:focus{left:.5rem;top:.5rem}
+
+/* ---------- Masthead ---------- */
+.rule{display:block;height:9px;background:linear-gradient(var(--red) 0 3px,transparent 3px 6px,var(--blue-2) 6px 9px)}
+.masthead{background:var(--card);border-bottom:1px solid var(--line)}
+.masthead .wrap{padding-top:1.5rem;padding-bottom:1.6rem}
+.flagmark{display:inline-block;line-height:0;margin-bottom:1rem;outline:1px solid rgba(10,49,97,.3)}
+.flagmark svg{display:block;height:2.9rem;width:auto}
+h1{font-family:var(--head);font-weight:700;font-size:clamp(2.3rem,11vw,3.7rem);line-height:1.05;letter-spacing:-.01em;margin:0;color:var(--h)}
+.sub{font-family:var(--head);font-size:1.3rem;line-height:1.35;color:var(--ink);margin:.75rem 0 0}
+.ver{display:inline-block;margin:1rem 0 0;padding:.2rem .8rem;border:2px solid var(--red);border-radius:999px;color:var(--red-ink);font-weight:700;font-size:1rem;line-height:1.5}
+
+/* ---------- Jump nav ---------- */
+.jump{position:sticky;top:0;z-index:20;background:var(--blue);box-shadow:0 3px 0 var(--red);padding:calc(env(safe-area-inset-top) + .5rem) 0 .5rem}
+.jump ul{display:flex;gap:.5rem;margin:0;padding:0 1rem;list-style:none;overflow-x:auto;scrollbar-width:none}
+.jump ul::-webkit-scrollbar{display:none}
+.jump a{display:flex;align-items:center;min-height:44px;padding:0 1rem;border:1px solid rgba(255,255,255,.45);border-radius:999px;color:#fff;text-decoration:none;font-weight:600;font-size:.97rem;white-space:nowrap}
+.jump a[aria-current="true"]{background:#fff;color:var(--blue);border-color:#fff}
+
+/* ---------- Content ---------- */
+.wrap{max-width:40rem;margin:0 auto;padding:0 1.25rem}
+section{padding:2.25rem 0 .75rem;scroll-margin-top:4.75rem}
+section.priority{border-top:1px solid var(--line);margin-top:1rem}
+h2{font-family:var(--head);font-size:1.6rem;line-height:1.25;margin:0 0 1rem;color:var(--h)}
+h3{font-family:var(--head);font-size:1.12rem;line-height:1.35;margin:1.6rem 0 .5rem;color:var(--h)}
+p{margin:0 0 1.05rem}
+.lead{font-size:1.27rem;line-height:1.55}
+.ph{display:flex;align-items:flex-start;gap:.8rem}
+.badge{flex:none;display:grid;place-items:center;width:2.3rem;height:2.3rem;margin-top:.1rem;border-radius:50%;background:var(--red);color:#fff;font-family:var(--text);font-weight:700;font-size:1.1rem;line-height:1}
+@media (prefers-color-scheme: dark){.badge{color:#2A0612}}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+.overview{list-style:none;margin:0;padding:0;counter-reset:p}
+.overview li{counter-increment:p;border-bottom:1px solid var(--line)}
+.overview a{display:flex;align-items:center;gap:.9rem;min-height:58px;padding:.6rem .15rem;color:var(--ink);text-decoration:none;font-weight:600}
+.overview a::before{content:counter(p);flex:none;display:grid;place-items:center;width:2.2rem;height:2.2rem;border-radius:50%;background:var(--blue);color:#fff;font-weight:700}
+.overview li:nth-child(odd) a::before{background:var(--red)}
+@media (prefers-color-scheme: dark){.overview li:nth-child(odd) a::before{color:#2A0612}.overview li:nth-child(even) a::before{background:var(--blue-2)}}
+
+/* Negotiating ladder: rungs are a true sequence, so they are numbered from 0 */
+.ladder{list-style:none;margin:1.25rem 0 1.25rem;padding:0}
+.ladder li{position:relative;margin:0;padding:.85rem 0 .95rem 1.25rem;border-left:5px solid var(--blue-2);border-bottom:1px solid var(--line)}
+.ladder li:nth-child(1){border-left-color:var(--line)}
+.ladder li:nth-child(2){border-left-color:var(--blue-2)}
+.ladder li:nth-child(3){border-left-color:var(--blue-2)}
+.ladder li:nth-child(4){border-left-color:var(--red)}
+.ladder li:nth-child(5){border-left-color:var(--red)}
+.ladder li:nth-child(6){border-left-color:var(--red-ink)}
+.ladder .rung{display:block;font-family:var(--head);font-weight:700;color:var(--h);margin-bottom:.15rem}
+.ladder .what{display:block}
+
+.act{font-weight:700}
+sup a{display:inline;padding:.3em .2em;font-weight:700;text-decoration:none}
+
+.rules-top{margin-top:2.5rem}
+.rules{list-style:none;margin:0 0 1rem;padding:0}
+.rules li{position:relative;padding:.7rem 0 .7rem 2rem;border-bottom:1px solid var(--line)}
+.rules li::before{content:"\2605";position:absolute;left:.1rem;top:.62rem;color:var(--red);font-size:1.15rem}
+.notes{padding-left:1.3rem;font-size:.98rem;line-height:1.55;color:var(--soft)}
+.notes li{margin-bottom:.6rem;overflow-wrap:anywhere}
+.points{margin:0 0 1.05rem;padding-left:1.3rem}
+.points li{margin-bottom:.6rem}
+
+footer{margin-top:3rem;text-align:center;font-size:.95rem;color:var(--soft)}
+footer p{padding:1.1rem 1.25rem 2.25rem;margin:0}
+
+
+/* Hot-button highlights */
+mark.key{background:var(--hot);color:var(--hot-ink);padding:.1em .2em;border-radius:3px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.asof{font-size:.98rem;color:var(--soft)}
+
+/* ---------- Motion: one moment, the flag unfurling ---------- */
+@media (prefers-reduced-motion: no-preference){
+  .s{transform-box:fill-box;transform-origin:0 50%;animation:unfurl .9s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--i) * 80ms)}
+  .canton,.stars{animation:fadein .7s ease both;animation-delay:.55s}
+}
+@keyframes unfurl{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes fadein{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+
+@media (min-width:48rem){
+  body{font-size:1.1875rem}
+}
+@media print{
+  .jump,.skip{display:none}
+  body{background:#fff;color:#000;font-size:11pt}
+  section{break-inside:avoid-page}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#offer">Skip to the memo</a>
+
+<header class="masthead">
+  <div class="rule" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="flagmark" role="img" aria-label="The American flag"><svg viewBox="0 0 760 400" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><defs><polygon id="st" points="0.00,-12.32 2.77,-3.81 11.72,-3.81 4.48,1.45 7.24,9.97 0.00,4.71 -7.24,9.97 -4.48,1.45 -11.72,-3.81 -2.77,-3.81"/></defs><rect width="760" height="400" fill="#FFFFFF"/><rect class="s" style="--i:0" x="0" y="0.000" width="760" height="31.069" fill="#B31942"/><rect class="s" style="--i:1" x="0" y="61.538" width="760" height="31.069" fill="#B31942"/><rect class="s" style="--i:2" x="0" y="123.076" width="760" height="31.069" fill="#B31942"/><rect class="s" style="--i:3" x="0" y="184.614" width="760" height="31.069" fill="#B31942"/><rect class="s" style="--i:4" x="0" y="246.152" width="760" height="31.069" fill="#B31942"/><rect class="s" style="--i:5" x="0" y="307.690" width="760" height="31.069" fill="#B31942"/><rect class="s" style="--i:6" x="0" y="369.228" width="760" height="31.069" fill="#B31942"/><rect class="canton" width="304.00" height="215.38" fill="#0A3161"/><g class="stars" fill="#FFFFFF"><use href="#st" transform="translate(25.33 21.54)"/><use href="#st" transform="translate(76.00 21.54)"/><use href="#st" transform="translate(126.67 21.54)"/><use href="#st" transform="translate(177.34 21.54)"/><use href="#st" transform="translate(228.01 21.54)"/><use href="#st" transform="translate(278.68 21.54)"/><use href="#st" transform="translate(50.67 43.08)"/><use href="#st" transform="translate(101.34 43.08)"/><use href="#st" transform="translate(152.01 43.08)"/><use href="#st" transform="translate(202.68 43.08)"/><use href="#st" transform="translate(253.35 43.08)"/><use href="#st" transform="translate(25.33 64.62)"/><use href="#st" transform="translate(76.00 64.62)"/><use href="#st" transform="translate(126.67 64.62)"/><use href="#st" transform="translate(177.34 64.62)"/><use href="#st" transform="translate(228.01 64.62)"/><use href="#st" transform="translate(278.68 64.62)"/><use href="#st" transform="translate(50.67 86.15)"/><use href="#st" transform="translate(101.34 86.15)"/><use href="#st" transform="translate(152.01 86.15)"/><use href="#st" transform="translate(202.68 86.15)"/><use href="#st" transform="translate(253.35 86.15)"/><use href="#st" transform="translate(25.33 107.69)"/><use href="#st" transform="translate(76.00 107.69)"/><use href="#st" transform="translate(126.67 107.69)"/><use href="#st" transform="translate(177.34 107.69)"/><use href="#st" transform="translate(228.01 107.69)"/><use href="#st" transform="translate(278.68 107.69)"/><use href="#st" transform="translate(50.67 129.23)"/><use href="#st" transform="translate(101.34 129.23)"/><use href="#st" transform="translate(152.01 129.23)"/><use href="#st" transform="translate(202.68 129.23)"/><use href="#st" transform="translate(253.35 129.23)"/><use href="#st" transform="translate(25.33 150.77)"/><use href="#st" transform="translate(76.00 150.77)"/><use href="#st" transform="translate(126.67 150.77)"/><use href="#st" transform="translate(177.34 150.77)"/><use href="#st" transform="translate(228.01 150.77)"/><use href="#st" transform="translate(278.68 150.77)"/><use href="#st" transform="translate(50.67 172.31)"/><use href="#st" transform="translate(101.34 172.31)"/><use href="#st" transform="translate(152.01 172.31)"/><use href="#st" transform="translate(202.68 172.31)"/><use href="#st" transform="translate(253.35 172.31)"/><use href="#st" transform="translate(25.33 193.85)"/><use href="#st" transform="translate(76.00 193.85)"/><use href="#st" transform="translate(126.67 193.85)"/><use href="#st" transform="translate(177.34 193.85)"/><use href="#st" transform="translate(228.01 193.85)"/><use href="#st" transform="translate(278.68 193.85)"/></g></svg></div>
+    <h1>Project 2027</h1>
+    <p class="sub">The Art of the Deal: A Legislative Agenda for the 120th Congress</p>
+    <p class="ver">Version 1.1</p>
+  </div>
+</header>
+
+<nav class="jump" aria-label="Jump to a section">
+  <ul>
+    <li><a href="#offer">Offer</a></li>
+    <li><a href="#ladder">Ladder</a></li>
+    <li><a href="#p1">Costs</a></li>
+    <li><a href="#p2">Health</a></li>
+    <li><a href="#p3">Housing</a></li>
+    <li><a href="#p4">Clean gov</a></li>
+    <li><a href="#p5">Limits</a></li>
+    <li><a href="#p6">Energy</a></li>
+    <li><a href="#p7">Honor</a></li>
+    <li><a href="#rules">Rules</a></li>
+    <li><a href="#first100">100 days</a></li>
+    <li><a href="#sources">Notes</a></li>
+  </ul>
+</nav>
+
+<main>
+
+<section id="offer"><div class="wrap">
+  <h2>The Offer</h2>
+  <p class="lead">Voters have given Democrats both chambers of Congress, and the President holds the veto. Democrats want lower costs and a stronger, more secure country for American families, and President Trump wants his place in history.</p>
+  <p>Project 2027 puts both on the table. Every bill is proposed first on its own merits, with nothing attached. If a bill stalls, the offer climbs a ladder of recognition one rung at a time, starting with the honors that cost Democrats the least. Each bill is negotiated separately and in public, and nothing is delivered until the legislation is signed.</p>
+</div></section>
+
+<section id="ladder"><div class="wrap">
+  <h2>The Negotiating Ladder</h2>
+  <p>Plan A is the bill alone, and the prizes are Plan B. The President may sign a law that lowers costs for every American with nothing offered in return, and every prize that is not needed is a prize Democrats never have to give.</p>
+  <p>Every bill follows the same ladder. Democrats move up one rung only after the rung below has been offered and has failed.</p>
+  <ol class="ladder">
+    <li><span class="rung">Rung 0: The bill alone</span><span class="what">Democrats propose the bill on its merits, with no prize attached.</span></li>
+    <li><span class="rung">Rung 1: The bill with his name</span><span class="what">The bill is named for President Trump. A healthcare law, for example, would carry his name. This costs nothing.</span></li>
+    <li><span class="rung">Rung 2: Recognition already in place</span><span class="what">Congress approves leaving his name on the Kennedy Center, which needs no new construction and no new spending, and passes formal commendations for specific, documented accomplishments.</span></li>
+    <li><span class="rung">Rung 3: Modest honors</span><span class="what">Congress creates the United States Presidential Peace Prize with President Trump as its first recipient, and protects the redesigned Oval Office from alteration by later administrations.</span></li>
+    <li><span class="rung">Rung 4: Major honors</span><span class="what">Congress places his portrait on American money.</span></li>
+    <li><span class="rung">Rung 5: The largest honors</span><span class="what">Congress authorizes the Donald J. Trump Ballroom and the Trump Triumphal Arch.</span></li>
+  </ol>
+  <p>Rungs 2 through 5 are the prize menu in <a href="#p7">Priority 7</a>. The order runs from least to most valuable from a Democratic point of view, and Democrats may adjust it as talks proceed. A bigger bill can justify a higher rung, but no bill skips the rungs below it.</p>
+</div></section>
+
+<section id="priorities"><div class="wrap">
+  <h2>The Seven Priorities</h2>
+  <ol class="overview">
+    <li><a href="#p1">Lower the cost of groceries, gas and imported goods</a></li>
+    <li><a href="#p2">Make healthcare affordable</a></li>
+    <li><a href="#p3">Open the door to housing for young people</a></li>
+    <li><a href="#p4">Clean up money and corruption in politics</a></li>
+    <li><a href="#p5">Rebalance the powers of the presidency</a></li>
+    <li><a href="#p6">Reduce dependency on the Strait of Hormuz</a></li>
+    <li><a href="#p7">Honor the Trump Presidency</a></li>
+  </ol>
+</div></section>
+
+<section class="priority" id="p1"><div class="wrap"><h2 class="ph"><span class="badge" aria-hidden="true">1</span><span><span class="vh">Priority 1: </span>Lower the Cost of Groceries, Gas and Imported Goods</span></h2>
+  <p>Families feel the price of food and fuel every week. Democrats pass a relief package aimed at both. It is the first and smallest deal, and it opens negotiations by showing that the process works. Like every bill, it starts at Rung 0.</p>
+  <h3>Smarter tariffs</h3>
+  <p>Tariffs raise the price of imported goods and of products built with imported parts. They also strain relationships with the allies America depends on. Democrats propose a tariff law that replaces broad, across-the-board tariffs with narrower and more thoughtful ones.<sup><a id="r1" href="#n1" aria-label="Note 1">1</a></sup></p>
+  <ul class="points">
+    <li>Groceries and everyday household goods are exempt.</li>
+    <li>Tariffs are aimed at specific unfair practices and specific strategic industries, not at every product from every country.</li>
+    <li>The President negotiates tariff-reduction agreements with allies and close trading partners, and those agreements lower duties in both directions.</li>
+    <li>Tariffs remain available against bad actors, so the President keeps a tool he values.</li>
+  </ul>
+  <p>This is the hardest sale in the plan. President Trump treats tariffs as a signature tool, so this bill is the most likely to need the higher rungs of the ladder. It still starts at Rung 0, then moves to Rung 1, and only then climbs through the prize menu from the least valuable honor to the most valuable.</p>
+</div></section>
+<section class="priority" id="p2"><div class="wrap"><h2 class="ph"><span class="badge" aria-hidden="true">2</span><span><span class="vh">Priority 2: </span>Make Healthcare Affordable</span></h2>
+  <p>Healthcare is the largest bill on the table. Democrats cap prescription drug prices and out-of-pocket costs, then follow with a comprehensive affordability law.</p>
+</div></section>
+<section class="priority" id="p3"><div class="wrap"><h2 class="ph"><span class="badge" aria-hidden="true">3</span><span><span class="vh">Priority 3: </span>Open the Door to Housing for Young People</span></h2>
+  <p>Buying a first home has become out of reach for a generation. Democrats pass a first-time and young homebuyer package.</p>
+</div></section>
+<section class="priority" id="p4"><div class="wrap"><h2 class="ph"><span class="badge" aria-hidden="true">4</span><span><span class="vh">Priority 4: </span>Clean Up Money and Corruption in Politics</span></h2>
+  <p>Democrats strengthen the rules on money in politics and protect the independence of the Department of Justice. These reforms are not traded for any prize, and neither is oversight. Investigations proceed on their own track, separate from the deal.</p>
+</div></section>
+<section class="priority" id="p5"><div class="wrap"><h2 class="ph"><span class="badge" aria-hidden="true">5</span><span><span class="vh">Priority 5: </span>Rebalance the Powers of the Presidency</span></h2>
+  <p>Democrats pass clear limits on executive power that take effect at the start of the next term, so the rules apply to every future president equally. Democrats consider this the most valuable item in the plan.</p>
+</div></section>
+<section class="priority" id="p6"><div class="wrap"><h2 class="ph"><span class="badge" aria-hidden="true">6</span><span><span class="vh">Priority 6: </span>Reduce Dependency on the Strait of Hormuz</span></h2>
+  <p>Any legislation that revises a provision of the One Big Beautiful Bill is passed as the <span class="act">Donald J. Trump Recognition and Betterizing America Act</span>. The energy section of that act is the <span class="act">Reduce Dependency on Strait of Hormuz Act</span>. It restores tax credits for solar panels and home batteries, restores tax credits for electric vehicles, and funds upgrades to the resilience of the power grid.</p>
+  <p>Its purpose is to protect American families and the American economy from price shocks caused by conflict overseas. Every barrel of oil the country does not need is a barrel that no foreign navy can block. The naming credit (Rung 1) is the only recognition offered for this priority.</p>
+</div></section>
+<section class="priority" id="p7"><div class="wrap"><h2 class="ph"><span class="badge" aria-hidden="true">7</span><span><span class="vh">Priority 7: </span>Honor the Trump Presidency</span></h2>
+  <p><mark class="key">If a bill cannot win the President&rsquo;s signature on its own, Democrats offer recognition that only Congress can give.</mark> Every honor is tied to the passage of a legislative act intended to improve the lives of all Americans, and every honor sits on the <a href="#ladder">ladder</a>.</p>
+  <p>The lowest rungs cost the least. Congress approves leaving his name on the Kennedy Center,<sup><a id="r4" href="#n4" aria-label="Note 4">4</a></sup> which is already on the building and needs no new construction, and passes formal commendations for specific, documented accomplishments. Congress then creates the United States Presidential Peace Prize, with President Trump as its first recipient, and protects the redesigned Donald J. Trump Oval Office from alteration by later administrations.</p>
+  <p>The highest rungs are worth the most to the President and cost Democrats the most. Congress places his portrait on American money, whether a gold coin or the $1, $100 or $250 note.<sup><a id="r5" href="#n5" aria-label="Note 5">5</a></sup> At the top, Congress authorizes the Donald J. Trump Ballroom and underground security complex<sup><a id="r2" href="#n2" aria-label="Note 2">2</a></sup> and the Trump Triumphal Arch.<sup><a id="r3" href="#n3" aria-label="Note 3">3</a></sup> Democrats make no assumptions about which of these honors the President values most. Each is negotiated separately and matched to a bill as the talks proceed.</p>
+</div></section>
+
+<section id="rules"><div class="wrap">
+  <div class="rule rules-top" aria-hidden="true"></div>
+  <h2 style="margin-top:2rem">How the Deal Works</h2>
+  <p>Five rules govern every item.</p>
+  <ul class="rules">
+    <li>Every bill is proposed first with no prize attached.</li>
+    <li>If a prize is needed, the offer climbs one rung at a time, from the honor that costs Democrats the least to the one that costs the most.</li>
+    <li>The President&rsquo;s name on a bill is the first thing offered, and Democrats hold the larger honors for the larger bills.</li>
+    <li>Nothing takes effect until the law it was traded for takes effect.</li>
+    <li>Every concession is written into a bill, passed by Congress and placed on the public record.</li>
+  </ul>
+</div></section>
+
+<section id="first100"><div class="wrap">
+  <h2>The First 100 Days</h2>
+  <p>Congress convenes on January 3 and introduces all seven priorities together, each one without a prize attached. Democrats open talks with the White House on a first package and publish a public scorecard so voters can follow the progress, including which rung of the ladder each bill has reached.</p>
+</div></section>
+
+<section id="sources"><div class="wrap">
+  <h2>Notes and Sources</h2>
+  <p class="asof">Status as of November 12, 2026. Litigation is ongoing, and these facts may change.</p>
+  <ol class="notes">
+    <li id="n1"><strong>Tariffs.</strong> The Supreme Court struck down the broad emergency-powers (IEEPA) tariffs in February, and those duties ended on February 24. The administration then imposed a 10% global tariff under Section 122, which lasts 150 days unless Congress extends it, and that tariff expired on July 24. Since then it has relied on Section 301 and Section 232. One trade-compliance timeline lists new Section 301 duties of 10% or 12.5% on 60 countries starting July 24, and 50% duties on certain Canadian goods under Section 338 starting August 19. Sources: <a href="https://www.everycrsreport.com/files/2026-10-08_R49481_1c8e009891a819567af7b8fc2bbaf870cc618687.pdf" rel="noopener">Congressional Research Service</a> (Oct. 8); <a href="https://www.chrobinson.com/resources/insights-and-advisories/trade-tariff-insights/tariff-timeline/" rel="noopener">C.H. Robinson tariff timeline</a>. <a href="#r1" aria-label="Back to the text">Back to text</a></li>
+    <li id="n2"><strong>Ballroom.</strong> U.S. District Judge Richard Leon ordered aboveground work halted on April 16 because Congress had not approved the project, and a divided D.C. Circuit panel upheld that order on August 7. On August 31, the Supreme Court ruled 5-4 that construction could continue while the case proceeds, with the majority indicating the preservationist plaintiffs likely lack standing. The case remains in the lower courts. AP also reported that Congress declined in May to provide the $1 billion the administration requested for the project. Sources: <a href="https://www.kob.com/ap-top-news/appeals-court-rules-trump-cant-build-white-house-ballroom-without-congressional-approval" rel="noopener">AP via KOB</a> (Aug. 7); <a href="https://idahocapitalsun.com/2026/08/31/repub/us-supreme-court-lets-trump-move-ahead-with-his-white-house-ballroom-project/" rel="noopener">Idaho Capital Sun</a> (Aug. 31). <a href="#r2" aria-label="Back to the text">Back to text</a></li>
+    <li id="n3"><strong>Arch.</strong> The National Capital Planning Commission approved the arch 8-4 on November 5. Within hours, U.S. District Judge Tanya Chutkan issued a 14-day temporary restraining order blocking construction, and she rejected the administration&rsquo;s argument that a 1925 statute already authorizes it. Her court has consolidated a suit by veterans and an architectural historian with a separate suit by the District of Columbia and Virginia. Sources: <a href="https://www.fox19.com/2026/11/06/federal-judge-orders-14-day-delay-any-work-beginning-trumps-monumental-arch/?outputType=amp" rel="noopener">AP via Fox19</a> (Nov. 6); <a href="https://www.wfae.org/united-states-world/2026-11-06/a-judge-blocks-construction-of-trumps-arch-moments-after-it-won-federal-approval" rel="noopener">NPR via WFAE</a> (Nov. 6). <a href="#r3" aria-label="Back to the text">Back to text</a></li>
+    <li id="n4"><strong>Kennedy Center.</strong> U.S. District Judge Christopher Cooper ruled on May 29 that the center cannot be renamed without an act of Congress and ordered Trump&rsquo;s name removed; the administration has appealed. In August the center&rsquo;s board voted to restore his name to the facade as part of a longer title crediting him with restoring and renovating the building. Sources: <a href="https://www.spokesman.com/stories/2026/may/29/us-judge-orders-removal-of-trumps-name-from-kenned/" rel="noopener">Spokesman-Review</a> (May 29); <a href="https://www.dailymaverick.co.za/article/2026-06-12-trump-appeals-court-order-to-strip-his-name-from-kennedy-center-building/" rel="noopener">Daily Maverick</a> (June 12); <a href="https://www.newsweek.com/trumps-dc-building-projects-ranked-by-size-and-cost-12411614" rel="noopener">Newsweek</a>. <a href="#r4" aria-label="Back to the text">Back to text</a></li>
+    <li id="n5"><strong>Currency.</strong> An 1866 law allows only portraits of deceased people on U.S. currency and securities. Treasury has said commemorative coins fall outside that rule, and the Mint announced on July 15 that it will strike a $1 gold-colored coin with his portrait. Separately, Treasury announced in March that his signature will appear on all future paper currency, starting with the $100 bill. A $250 note with his portrait would require legislation, which has been introduced but has not advanced. Sources: <a href="https://tucson.com/news/nation-world/government-politics/article_69d05a2f-1654-5851-a01b-6a261e4e4f9b.html" rel="noopener">tucson.com</a>; <a href="https://kutv.com/news/eye-on-your-money/treasury-secretary-bessent-confirms-limited-steps-toward-a-250-bill-featuring-trump" rel="noopener">KUTV</a>; <a href="https://www.westword.com/news/denver-mint-trump-gold-coin-40911946/" rel="noopener">Westword</a> (July 15). <a href="#r5" aria-label="Back to the text">Back to text</a></li>
+  </ol>
+  <h3>What changed in Version 1.1</h3>
+  <p class="asof">Version 1.0 was the original draft. Version 1.1 makes prizes Plan B by adding the Negotiating Ladder, in which every bill starts with no prize and then moves to the President&rsquo;s name before any other honor. It also adds a specific tariff proposal to Priority 1, reorders the honors in Priority 7 from least to most valuable, and rewrites the rules to match.</p>
+</div></section>
+
+</main>
+
+<footer>
+  <div class="rule" aria-hidden="true"></div>
+  <p>Project 2027 working draft, Version 1.1, prepared for the Democratic leadership.</p>
+</footer>
+
+<script>
+(function(){
+  var links=[].slice.call(document.querySelectorAll('.jump a'));
+  if(!links.length||!('IntersectionObserver' in window)) return;
+  var map={};
+  links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(!e.isIntersecting) return;
+      var a=map[e.target.id]; if(!a) return;
+      links.forEach(function(x){x.removeAttribute('aria-current');});
+      a.setAttribute('aria-current','true');
+      var ul=a.parentElement.parentElement;
+      ul.scrollTo({left:a.offsetLeft-(ul.clientWidth-a.offsetWidth)/2,behavior:'smooth'});
+    });
+  },{rootMargin:'-18% 0px -72% 0px'});
+  Object.keys(map).forEach(function(id){var s=document.getElementById(id); if(s) io.observe(s);});
+})();
+</script>
+</body>
+</html>
